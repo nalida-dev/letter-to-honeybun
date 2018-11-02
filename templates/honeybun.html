@@ -2,5 +2,25 @@
     <link rel="stylesheet" href="{{url_for('static', filename='honeybun.css')}}">
 </head>
 <body>
-    Honeybun is {{name}}
+    <form action="/">
+        {% for question in questions %}
+            {% set outer_loop = loop %}
+            <div>
+                <div>
+                    <p>{{question.question}}</p>
+                </div>
+                <div>
+                    {% if question.type == 'text' %}
+                        <input type="textarea" name="q{{loop.index}}">
+                    {% elif question.type == 'select' %}
+                        {% for option in question.options %}
+                            <div>
+                                <input type="radio" name="q{{outer_loop.index}}_o{{loop.index}}"/> {{option}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </form>
 </body>
