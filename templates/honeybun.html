@@ -1,26 +1,42 @@
 <head>
     <link rel="stylesheet" href="{{url_for('static', filename='honeybun.css')}}">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
 </head>
 <body>
-    <form action="/">
-        {% for question in questions %}
-            {% set outer_loop = loop %}
-            <div>
+    <div id="outermost-container">
+        <div id="cover">
+            <img id="honey_img" src="{{url_for('static', filename='honey.png')}}" />
+            <div id="honey_title">How I love my honeybun</div>
+            <div id="nalida_title">날리다 : 나를 알리다</div>
+        </div>
+        <div id="description">
+            <h1>Dear Honeybun,</h1>
+            <h2>with NALIDA</h2>
+            <p class="lead">안녕하세요! 날리다 : 나를 알리다 팀입니다.</p>
+            <p>저희는 청년들이 스스로에 대해 심층적으로 이해할 수 있도록 도와주는 자기이해 워크샵을 기획하고 진행하는 프로젝트 팀이에요. 이번에는 빼빼로데이를 맞아 특별한 이벤트를 준비했답니다.</p>
+            <p>여러분은 연인에 대해 얼마나 알고 계신가요? 사랑하는 나의 연인은 나를 어떻게 바라보고 있을까요? 아래의 링크를 통해 연인을 떠올리며 문제를 풀어 보고, 연인과 함께 그 결과에 대해 이야기를 나누어 봅시다.</p>
+            <p class="highlight">*Honeybun: [명] 애인, 연인을 부르는 애칭</p>
+        </div>
+        <form action="/">
+            {% for question in questions %}
+                {% set outer_loop = loop %}
                 <div>
-                    <p>{{question.question}}</p>
+                    <div class="question-div">
+                        <p class="question">Q{{loop.index}}. {{question.question}}</p>
+                    </div>
+                    <div class="answer-div">
+                        {% if question.type == 'text' %}
+                            <textarea class="answer" name="q{{loop.index}}"></textarea>
+                        {% elif question.type == 'select' %}
+                            {% for option in question.options %}
+                                <div>
+                                    <input type="radio" name="q{{outer_loop.index}}_o{{loop.index}}"/> {{option}}
+                                </div>
+                            {% endfor %}
+                        {% endif %}
+                    </div>
                 </div>
-                <div>
-                    {% if question.type == 'text' %}
-                        <input type="textarea" name="q{{loop.index}}">
-                    {% elif question.type == 'select' %}
-                        {% for option in question.options %}
-                            <div>
-                                <input type="radio" name="q{{outer_loop.index}}_o{{loop.index}}"/> {{option}}
-                            </div>
-                        {% endfor %}
-                    {% endif %}
-                </div>
-            </div>
-        {% endfor %}
-    </form>
+            {% endfor %}
+        </form>
+    </div>
 </body>

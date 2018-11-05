@@ -1,2 +1,94 @@
 body {
+    font-family: 'Nanum Barun Gothic';
+    font-weight: normal;
+}
+
+
+#outermost-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#outermost-container::before, #outermost-container::after {
+    height: 2000%;
+    content: ' ';
+    position: absolute;
+    top: 0;
+    width: 16.25%;
+    background-color: rgb(253, 225, 151);
+}
+
+#outermost-container::before {
+    left: 0;
+}
+
+#outermost-container::after {
+    right: 0;
+}
+
+#outermost-container > * {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+    max-width: 1200px;
+}
+
+#cover {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#honey_img {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    max-width: 400px;
+}
+
+#honey_title {
+    color: rgb(250, 175, 77);
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-size: 28px;
+    font-style: italic;
+    font-variant: bold;
+    font-weight: 700;
+    line-height: 26.4px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#nalida_title {
+    color: rgb(127, 127, 127);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.question-div, .answer-div {
+    margin: auto;
+    display: flex;
+}
+
+.question, .answer {
+    width: 60%;
+    max-width: 1200px;
+    margin: auto;
+    word-break: keep-all;
+}
+
+.question {
+    margin-top: 70px;
+    font-size: 150%;
+    text-align: center;
+}
+
+.answer {
+    min-height: 50px;
+    margin-top: 30px;
+    border: 2px solid black;
+    padding: 5px;
 }
