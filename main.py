@@ -26,6 +26,6 @@ def save():
     answers = list(map(lambda x:x[1], sorted(request.form.items(), key=lambda x:int(x[0][1:]))))
     print(answers)
     db.set("answer:%s" % result_id, json.dumps(answers))
-    return redirect(url_for('result', key=result_id))
+    return redirect(url_for('result', result_id=result_id))
 
 app.run(host=credentials.HOST, port=credentials.PORT)
