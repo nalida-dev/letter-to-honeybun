@@ -34,7 +34,6 @@ body {
 }
 
 #cover {
-    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -43,11 +42,11 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
-    max-width: 400px;
+    max-width: 300px;
 }
 
 #honey_title {
-    color: rgb(250, 175, 77);
+    color: black; /*rgb(250, 175, 77);*/
     font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
     font-size: 28px;
     font-style: italic;
@@ -60,13 +59,17 @@ body {
     text-align: center;
 }
 
-#nalida_title {
-    color: rgb(127, 127, 127);
-    margin-left: auto;
-    margin-right: auto;
+#cover p {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-style: italic;
+    font-variant: bold;
+    line-height: 26.4px;
     text-align: center;
-    margin-top: 40px;
+    font-weight: 400;
+    margin-top: 20px;
+    margin-bottom: 50px;
 }
+
 
 #description {
     display: flex;
@@ -78,26 +81,6 @@ body {
     max-width: 85%;
     margin-left: auto;
     margin-right: auto;
-}
-
-#description h1, #description h2 {
-    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
-    font-style: italic;
-    font-variant: bold;
-    line-height: 26.4px;
-    text-align: center;
-}
-
-#description h1 {
-    font-size: 72px;
-    line-height: 1;
-    font-weight: 700;
-}
-
-#description h2 {
-    font-weight: 400;
-    margin-top: 70px;
-    margin-bottom: 100px;
 }
 
 #description p {
@@ -175,6 +158,8 @@ body {
 #submit {
     width: 270px;
     height: 81px;
+    padding-left: 8px;
+    padding-bottom: 8px;
     border: none;
     background: url('/static/button.png') no-repeat scroll 0 0 transparent;
     font-size: 24px;
