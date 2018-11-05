@@ -10,12 +10,12 @@ body {
 }
 
 #outermost-container::before, #outermost-container::after {
-    height: 2000%;
+    height: 100%;
     content: ' ';
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 16.25%;
-    background-color: rgb(253, 225, 151);
+    background-image: linear-gradient(to top right, rgb(241,199,91), rgb(255,228,158));
 }
 
 #outermost-container::before {
@@ -68,13 +68,69 @@ body {
     margin-top: 40px;
 }
 
+#description {
+    display: flex;
+    flex-direction: column;
+}
+
+#description > * {
+    width: 85%;
+    max-width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#description h1, #description h2 {
+    font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+    font-style: italic;
+    font-variant: bold;
+    line-height: 26.4px;
+    text-align: center;
+}
+
+#description h1 {
+    font-size: 72px;
+    line-height: 1;
+    font-weight: 700;
+}
+
+#description h2 {
+    font-weight: 400;
+    margin-top: 70px;
+    margin-bottom: 100px;
+}
+
+#description p {
+    line-height: 26.4px;
+}
+
+#description .lead {
+    font-size: 130%;
+}
+
+#description small {
+    color: white;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: rgb(237, 192, 75);
+    font-weight: 700;
+    margin-top: 30px;
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    font-size: 18px;
+}
+
 .question-div, .answer-div {
     margin: auto;
     display: flex;
 }
 
-.question, .answer {
-    width: 60%;
+.question, .answer, .answer-result {
+    width: 85%;
     max-width: 1200px;
     margin: auto;
     word-break: keep-all;
@@ -92,3 +148,40 @@ body {
     border: 2px solid black;
     padding: 5px;
 }
+
+.answer-result {
+    text-align: center;
+    border: 0px;
+    min-height: 50px;
+    margin-top: 30px;
+}
+
+
+#finish {
+    display: flex;
+    flex-direction: column;
+}
+
+#finish p {
+    margin-top: 150px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#outro {
+    font-weight: 700;
+}
+
+#submit {
+    width: 270px;
+    height: 81px;
+    border: none;
+    background: url('/static/button.png') no-repeat scroll 0 0 transparent;
+    font-size: 24px;
+    font-weight: 700;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 100px;
+}
+
