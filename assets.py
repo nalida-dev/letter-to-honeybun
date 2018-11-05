@@ -3,11 +3,11 @@ questions = [
         "question": "먼저, 평소에 부르는 단순한 애칭이 아닌 honeybun의 특성을 가장 잘 표현하는 애칭/별명을 새롭게 지어주세요.",
         "type": "text"
     },
-    {
-        "question": "나는 honeybun에게 어떤 말투를 쓰나요?",
-        "type": "select",
-        "options": ["존댓말", "반말"]
-    },
+#    {
+#        "question": "나는 honeybun에게 어떤 말투를 쓰나요?",
+#        "type": "select",
+#        "options": ["존댓말", "반말"]
+#    },
     {
         "question": "honeybun과 만난 지는 얼마나 되셨나요?",
         "type": "text"
