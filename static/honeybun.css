@@ -18,6 +18,12 @@ body {
     background-image: linear-gradient(to top right, rgb(241,199,91), rgb(255,228,158));
 }
 
+@media (max-width: 720px) {
+    #outermost-container::before, #outermost-container::after {
+        width: 5%;
+    }
+}
+
 #outermost-container::before {
     left: 0;
 }
@@ -33,6 +39,12 @@ body {
     max-width: 1200px;
 }
 
+@media (max-width: 720px) {
+    #outermost-container > * {
+        width: 85%;
+    }
+}
+
 #cover {
     display: flex;
     flex-direction: column;
@@ -42,7 +54,14 @@ body {
     margin-left: auto;
     margin-right: auto;
     margin-top: 100px;
+    width: 85%;
     max-width: 300px;
+}
+
+@media (max-width: 720px) {
+    #honey_img {
+        margin-top: 50px;
+    }
 }
 
 #honey_title {
@@ -83,6 +102,13 @@ body {
     margin-right: auto;
 }
 
+@media (max-width: 720px) {
+    #description > * {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
 #description p {
     line-height: 26.4px;
 }
@@ -105,6 +131,13 @@ body {
     margin-right: auto;
     text-align: center;
     font-size: 18px;
+    word-break: keep-all;
+}
+
+@media (max-width: 720px) {
+    #description small {
+        width: 90%;
+    }
 }
 
 .question-div, .answer-div {
@@ -139,6 +172,12 @@ body {
     margin-top: 30px;
 }
 
+@media (max-width: 720px) {
+    .question, .answer, .answer-result {
+        width: 100%;
+        font-size: 100%;
+    }
+}
 
 #finish {
     display: flex;
@@ -146,7 +185,7 @@ body {
 }
 
 #finish p {
-    margin-top: 150px;
+    margin-top: 100px;
     margin-left: auto;
     margin-right: auto;
 }
