@@ -18,7 +18,7 @@ body {
     background-image: linear-gradient(to top right, rgb(241,199,91), rgb(255,228,158));
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
     #outermost-container::before, #outermost-container::after {
         width: 5%;
     }
@@ -39,7 +39,7 @@ body {
     max-width: 1200px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
     #outermost-container > * {
         width: 85%;
     }
@@ -58,7 +58,7 @@ body {
     max-width: 300px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
     #honey_img {
         margin-top: 50px;
     }
@@ -102,7 +102,7 @@ body {
     margin-right: auto;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
     #description > * {
         width: 100%;
         max-width: 100%;
@@ -134,7 +134,7 @@ body {
     word-break: keep-all;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
     #description small {
         width: 90%;
     }
@@ -172,7 +172,7 @@ body {
     margin-top: 30px;
 }
 
-@media (max-width: 720px) {
+@media (max-width: 960px) {
     .question, .answer, .answer-result {
         width: 100%;
         font-size: 100%;
