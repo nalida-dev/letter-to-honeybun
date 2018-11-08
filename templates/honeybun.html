@@ -1,5 +1,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="[빼빼로데이 특집] 사랑하는 당신의 연인에게 진심을 전해주세요.">
+    <title>How I love my honeybun</title>
     <link rel="stylesheet" href="{{url_for('static', filename='honeybun.css')}}">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css">
 </head>
@@ -24,6 +26,9 @@
                 <div>
                     <div class="question-div">
                         <p class="question">Q{{loop.index}}. {{question.question}}</p>
+                        {% if not answers and question.example %}
+                            <small>{{question.example}}</small>
+                        {% endif %}
                     </div>
                     <div class="answer-div">
                         {% if answers %}
