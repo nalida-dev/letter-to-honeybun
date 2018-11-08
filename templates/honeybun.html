@@ -32,7 +32,9 @@
                     </div>
                     <div class="answer-div">
                         {% if answers %}
-                            <p class="answer-result">{{answers[loop.index-1]}}</p>
+                            {% if loop.index <= answers|length %}
+                                <p class="answer-result">{{answers[loop.index-1]}}</p>
+                            {% endif %}
                         {% else %}
                             {% if question.type == 'text' %}
                                 <textarea class="answer" name="q{{loop.index}}"></textarea>
